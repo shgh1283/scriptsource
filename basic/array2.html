@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numArr = [52, 273, 586, 32, 57, 103, 321, 2];
+      // q1) 최소값과 최대값 출력
+      numArr.sort(function (a, b) {
+        return b - a;
+      });
+      console.log("최대값 =", numArr[0]);
+      console.log("최소값 =", numArr[7]);
+
+      // q2) 사용자에게 한글로 된 해성 이름을 입력 받은 후 영어로 된 행성이름 출력
+      const planetKor = [
+        "수성",
+        "금성",
+        "지구",
+        "화성",
+        "목성",
+        "토성",
+        "천왕성",
+        "해왕성",
+      ];
+      const planetEng = [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Nepnune",
+      ];
+      let solarSystem = prompt("태양계 행성을 한글로 입력하세요");
+      let planetIndex = planetKor.indexOf(solarSystem);
+      console.log("입력한 행성의 영어명은 :", planetEng[planetIndex]);
+      document.write("입력한 행성의 영어명은 :", planetEng[planetIndex]);
+    </script>
+  </body>
+</html>
