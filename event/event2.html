@@ -25,25 +25,28 @@
     </table>
     <p id="demo">Click me</p>
     <script>
-      // table 클릭 시 two => three , three => two
-      const twoBtn = document.getElementById("outside");
-      twoBtn.addEventListener("click", () => {
-        // t2 요소의 텍스트가 two => three , three =>two
+      // table 클릭 시 two => three, three => two
+      // 이벤트 대상 찾기 / 해야 할 함수 작성 / 연결
+      const table = document.getElementById("outside");
+      table.addEventListener("click", () => {
+        // t2 요소의 텍스트가 two => three, three => two
         const t2 = document.querySelector("#t2");
         // if (t2.textContent == "three") {
-        //     t2.textContent = "two";
-        // } else{
-        //     t2.textContent ="three";
+        //   t2.textContent = "two";
+        // } else {
+        //   t2.textContent = "three";
         // }
         t2.textContent = t2.textContent == "three" ? "two" : "three";
       });
 
-      // p 요소 클릭시 Good job!! 변경
-      const pclick = document.getElementById("demo");
-      //   pclick.addEventListener("click", () => {
-      //     pclick.innerHTML = "Good job!!";
+      // p 요소 클릭시 Good Job!! 변경
+      const p = document.querySelector("#demo");
+
+      //   p.addEventListener("click", () => {
+      //     p.innerHTML = "Good Job!!";
       //   });
-      pclick.addEventListener("click", (e) => {
+
+      p.addEventListener("click", (e) => {
         // e.target : 이벤트가 일어난 대상 == p
         e.target.innerHTML = "Good Job!!";
       });

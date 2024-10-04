@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* body{
-            background-color: green;
-        } */
+      /* body {
+        background-color: blue;
+      } */
     </style>
   </head>
   <body>
@@ -21,7 +21,7 @@
       // 사용자가 선택한 값에 따라 body 배경색 변경
       // 이벤트 대상 찾기
       // querySelector(선택자) : 선택자와 일치하는 첫번째 요소만 찾기
-      //   const rdo1 = document.querySelector("[type ='radio']");
+      //   const rdo1 = document.querySelector("[type='radio']");
       //   console.log(rdo1);
       //   rdo1.addEventListener("click", () => {
       //     document.body.style.backgroundColor = "lightblue";
@@ -33,7 +33,7 @@
       //     document.body.style.backgroundColor = "green";
       //   });
 
-      //  선택자가 동일한 모든 요소 찾기 => NodeList 구조
+      // 선택자가 동일한 모든 요소 찾기 => NodeList 구조
       //   const rdos = document.querySelectorAll("[type='radio']");
       //   console.log(rdos);
 
@@ -52,10 +52,13 @@
       //       document.body.style.backgroundColor = e.target.value;
       //     });
       //   });
-      const color = document.querySelector("form");
-      color.addEventListener("click", (e) => {
-        document.body.style.backgroundColor = e.target.value;
-      });
+
+      // 이벤트 버블링
+      const form = document.querySelector("form");
+      form.addEventListener(
+        "click",
+        (e) => (document.body.style.backgroundColor = e.target.value)
+      );
     </script>
   </body>
 </html>

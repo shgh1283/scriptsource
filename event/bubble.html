@@ -21,14 +21,14 @@
       //   const divs = document.querySelectorAll("div");
       //   divs.forEach((div) => {
       //     div.addEventListener("click", (e) => {
-      //       //   console.log("이벤트 대상 부모");
-      //       //   console.log(e.currentTarget.className);
-      //       console.log("이벤트 대상 ");
+      //       //console.log("이벤트 대상 부모");
+      //       //console.log(e.currentTarget.className);
+      //       console.log("이벤트 대상");
       //       console.log(e.target.className);
       //     });
       //   });
 
-      // 이벤트 버블링을 이용한 이벤트 감지
+      // 이벤트버블링을 이용한 이벤트 감지
       const one = document.querySelector(".one");
       one.addEventListener("click", (e) => {
         console.log(e.target.textContent);
