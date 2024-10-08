@@ -1,2 +1,33 @@
 Ajax(Asynchronous Javascript and XML)
  - 비동기적인 웹 애플리케이션 제작을 위해 사용
+ - XHttpRequest() - 예전방식
+ - jquery
+ - fetch() / axios() - 요즘방식
+
+ - 비동기 적으로 네트워크를 통해서 서버의 리소스 ( 파일- json, html, txt )를 취득
+
+ - JSON(Javascript object notation)은 다양한 시스템이 데이터를 교환할 수 있는 표준화되고 효율적인 방법을 제공하는 경량 데이터 교환 형식
+  자바 스크립트 객체와 유사함 : (name : "hong",age : 15)
+  json  : {"name" : "hong" , " age :"15"}
+
+  json <==> 자바 스크립트 객체
+
+  http 요청에 대한 응답
+  응답코드(http 상태코드)
+
+  200(성공응답) :  ok
+  403(권한 없움) : 클라이언트에게 권한 없음
+  404(Not Found) : 못찾음(요청이 잘못됨 : 경로확인)
+  500(Internal Server Error) : 서버 오류(서버가 잘 작동되기를 기다림)
+
+  OpenAPI
+  - 개방형 데이터 제공
+  - 시크릿 키를 발급받은 대상자들에게 데이터 오픈
+  - 네이버, 다음, 구글, 공공데이터 포털, 서울 열린데이터광장 ....
+  - 특정한 규칙을 이용해서 데이터 요청 
+영화진흥위원회 OpenAPI
+
+/searchDailyBoxOfficeList.json?key=82ca741a2844c5c180a208137bb92bd7&targetDt=20241007
+?key=value&key=value
+?name=홍길동&age=14
+?key=발급 받아야 하는 키&targetDt=날짜지정
